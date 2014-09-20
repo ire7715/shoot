@@ -1,14 +1,31 @@
-#ifndef __HTML_TREE_H__
-#define __HTML_TREE_H__
+#ifndef __SHOOT_H__
+#define __SHOOT_H__
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <fstream>
+#include <string>
 
-#define OUT_S html
-#define oprintf(format, ...) fprintf(OUT_S, format, ##__VA_ARGS__)
-FILE *html;
+using namespace std;
 
-void headFile(char *);
+namespace shoot{
+	class UnknownTitleException{
+	public:
+		UnknownTitleException(string *);
+	private:
+		string msg;
+	};
+	abstract class TreeNode{
+	public:
+		virtual TreeNode *sibling();
+		virtual TreeNode *child();
+		virtual bool hasSibling();
+		virtual bool hasChild();
+		virtual string getData();
+		void generate(const string &) const throw(shoot:UnknownTitleException);
+	private:
+		void headerGenerate(const ofstream &, const string &) const throw(shoot::UnknownTitleException);
+		void printNode(const ofstream &);
+	};
+}
 
 #endif
