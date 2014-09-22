@@ -31,7 +31,7 @@ A library helps students visualize their tree structure easily<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>string getData()</i>    : no argument, return the data contained in this node in string type.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>5.</b> Call the YourTreeNode->generate(filename) whenever you wanna produce a tree view.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>6.</b> Compile your project with "shoot.o"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>7.</b> Execute your outcome program.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>7.</b> Execute your outcome program. Then you can find "filename.html" in the same folder, that is te generated tree view.<br>
   <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Notify:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>1.</b> The file "shoot.hd", shall be placed under the same folder as your executable program is.<br>
