@@ -24,15 +24,15 @@ A library helps students visualize their tree structure easily<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>2.</b> Include "shoot.h" in your .cpp file.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>3.</b> Inherit your tree node class from shoot::TreeNode<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>4.</b> Implements some functions in your tree node class.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YourTreeNode *sibling() : no argument, return the pointer of this node's next sibling. If there is no next sibling you can return NULL instead.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YourTreeNode *child()   : no argument, return the pointer of this node's first child. If it don't have any child you can return NULL instead.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool hasSibling()   : no argument, return a boolean that if this node has next sibling. If it is the last sibling in this generation, return false. Otherwise, return true.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool hasSibling()   : no argument, return a boolean that if this node has any child. If it is the leaf node, return false. Else cases, return true.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string getData()    : no argument, return the data contained in this node in string type.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s>YourTreeNode *sibling()</s> : no argument, return the pointer of this node's next sibling. If there is no next sibling you can return NULL instead.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s>YourTreeNode *child()</s>   : no argument, return the pointer of this node's first child. If it don't have any child you can return NULL instead.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s>bool hasSibling()</s>   : no argument, return a boolean that if this node has next sibling. If it is the last sibling in this generation, return false. Otherwise, return true.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s>bool hasSibling()</s>   : no argument, return a boolean that if this node has any child. If it is the leaf node, return false. Else cases, return true.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s>string getData()</s>    : no argument, return the data contained in this node in string type.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>5.</b> Call the YourTreeNode->generate(filename) whenever you wanna produce a tree view.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>6.</b> Compile your project with "shoot.o"<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>7.</b> Execute your outcome program.<br>
-  
+  <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Notify:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>1.</b> The file "shoot.hd", shall be placed under the same folder as your executable program is.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>2.</b> When you open the html file produced by "generate()", it needs internet connection.<br>
