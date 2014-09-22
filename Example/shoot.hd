@@ -1,4 +1,9 @@
-	<script type="text/javascript" src="jquery.min.js"></script>
+<!--
+	Project	: Shoot
+	Author	: Ire @ github.com/ire7715
+	Date	: 22, Sep, 2014
+-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<style>
 		html, body{
 			margin: 0px;

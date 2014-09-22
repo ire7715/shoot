@@ -1,0 +1,79 @@
+<!--
+	Project	: Shoot
+	Author	: Ire @ github.com/ire7715
+	Date	: 22, Sep, 2014
+-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<style>
+		html, body{
+			margin: 0px;
+			padding: 0px;
+		}
+		a{
+			border-radius: 50px;
+			border: #0033CC solid 1px;
+			width: 50px;
+			height: 50px;
+			display: table-cell;
+			background-color: #99CCFF;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 16px;
+		}
+		body > div{
+			clear: both;
+		}
+		div{
+			float: left;
+			text-align: center;
+			margin: 10px;
+			z-index: 10;
+		}
+		div > p{
+			text-align: left;
+		}
+		center{
+			margin: 10px;
+		}
+		canvas{
+			position: absolute;
+			z-index: 0;
+		}
+	</style>
+	<script type="text/javascript">
+$("body").ready(function(){
+	var trees = $("body").children("div");
+	var can;
+	for(var i = 0; i<trees.length; i++){
+		can = document.createElement("canvas");
+		document.body.appendChild(can);
+		var paintTree = $("body").children("div")[i];
+		$(can).attr("width", $(paintTree).width());
+		$(can).attr("height", $(paintTree).height());
+		$(can).css("top", $(paintTree).position().top+"px");
+		$(can).css("left", $(paintTree).position().left+"px");
+		connect(can, paintTree);
+	}
+});
+function drawLine(canv, point1, point2){
+	var ctx = canv.getContext("2d");
+	var canvP = $(canv).position();
+	ctx.beginPath();
+	ctx.moveTo(point1.left+25 - canvP.left, point1.top+50 - canvP.top);
+	ctx.lineTo(point2.left+25 - canvP.left, point2.top - canvP.top);
+	ctx.stroke();
+}
+function getNode(block){
+	return $($(block).children("center")[0]).children("a")[0];
+}
+function connect(canv, root){
+	var rootNode = getNode(root);
+	var subtree = $(root).children("div");
+	var subNode;
+	for(var i = 0; i<subtree.length; i++){
+		subNode = getNode(subtree[i]);
+		drawLine(canv, $(rootNode).position(), $(subNode).position());
+		connect(canv, subtree[i]);
+	}
+}
+	</script>
